@@ -1,0 +1,63 @@
+/*use a galary template, fix bugs */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    background-color: #FFFFF0;
+    /*center texts.*/
+    text-align: center;
+    /*100vh takes entire page height*/
+    height: 100vh;
+    /*whole gallery.*/
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+}
+
+header {
+    display: grid;
+    font-size: xx-large;
+    padding: 30px;
+}
+
+main {
+    font-size: x-large;
+    padding: 30px;
+    color: #FFFFF0;
+    background-color: #282828;
+    display: grid;
+    /*horizontal center pics.*/
+    justify-items: center;
+    /*grids move to next line if too small*/
+    grid-template-columns: repeat(auto-fit,
+    minmax(240px, 1fr));
+    row-gap: 10px;
+}
+
+.images {
+    height: 250px;
+    width: 230px;
+    place-items: center;
+    /*image doesn't overflow box.*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: gray;
+}
+
+.images:hover {
+    cursor: pointer;
+}
+
+#picOne {
+    background-image: url("img/M3Cskull.jpg");
+}
+
+#picTwo {
+    background-image: url("img/MarySelfieC.jpg");
+}
+
+footer {
+    font-size: x-large;
+    padding: 20px;
+}
