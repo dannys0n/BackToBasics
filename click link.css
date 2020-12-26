@@ -18,46 +18,83 @@ body {
 header {
     display: grid;
     font-size: xx-large;
-    padding: 30px;
+    padding: 20px;
 }
 
 main {
     font-size: x-large;
-    padding: 30px;
+    padding: 50px;
     color: #FFFFF0;
-    background-color: #282828;
+    background-color: #353535;
     display: grid;
     /*horizontal center pics.*/
     justify-items: center;
     /*grids move to next line if too small*/
     grid-template-columns: repeat(auto-fit,
-    minmax(240px, 1fr));
-    row-gap: 10px;
+    minmax(270px, 1fr));
+    row-gap: 50px;
+}
+
+.hoverColor {
+    margin-top: -20px;
+    height: 250px;
+    width: 230px;
+    opacity: .35;
+    transition-property: opacity;
+    transition-duration: .7s;
 }
 
 .images {
     height: 250px;
     width: 230px;
-    place-items: center;
-    /*image doesn't overflow box.*/
+    /*image sizes to box.*/
     background-size: cover;
+    background-size: 230px 250px; 
     background-repeat: no-repeat;
-    background-color: gray;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px;
+    transition-property: box-shadow;
+    transition-duration: .7s;
+}
+
+.hoverColor:hover {
+    opacity: 1;
 }
 
 .images:hover {
     cursor: pointer;
+    box-shadow: 7px 7px 6px;
 }
 
 #picOne {
-    background-image: url("img/M3Cskull.jpg");
+    background-image: url("img/img1.jpg");
 }
 
 #picTwo {
-    background-image: url("img/MarySelfieC.jpg");
+    background-image: url("img/img2.jpg");
+}
+
+#picThree {
+    background-image: url("img/img3.jpg");
+}
+
+#picFour {
+    background-image: url("img/img4.jpg");
+}
+
+#picFive {
+    background-image: url("img/img5.jpg");
+}
+
+#picSix {
+    background-image: url("img/img6.jpg");
+}
+
+#picSeven {
+    background-image: url("img/img7.jpg");
 }
 
 footer {
     font-size: x-large;
-    padding: 20px;
+    padding: 10px;
 }
