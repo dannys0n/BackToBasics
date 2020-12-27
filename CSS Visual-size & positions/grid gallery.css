@@ -1,0 +1,64 @@
+body {
+    /*margin 0 overides to have no default padding*/
+    margin: 0;
+    background-color: cornsilk;
+}
+
+.grids {
+    background-color: rgb(199, 247, 244);
+    display: grid;
+    /*sets texts to be center*/
+    place-items: center;
+    /*sets grids horizontally center*/
+    margin: auto;
+    /*sets whole grids to take up 50% of screen height*/
+    height: 50vh;
+    /*sets whole grids to take up 50% of screen width*/
+    width: 50vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.square {
+    /*absolute lets me use left and right*/
+    position: absolute;
+    background-color: cyan;
+    width: 20vw;
+    margin-top: 20px;
+    left: 100px;
+}
+
+.square-two {
+    position: absolute;
+    background-color: cyan;
+    width: 20vw;
+    margin-top: 20px;
+    right: 100px;
+}
+
+.grid-one {
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+    /*the rest are boxes */
+.squares {
+    /*moves boxes down if resolution too small */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 70vh;
+}
+
+.one {
+    height: 200px;
+    width: 200px;
+    background-size: 200px;
+    /*display,flex,justify help center text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: chartreuse;
+}

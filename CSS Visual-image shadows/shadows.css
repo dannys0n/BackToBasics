@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+
+.shadows {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    /*moves boxes down if resolution too small */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    height: 100vh;
+}
+
+.button {
+    /*creates the shadow */
+    box-shadow: 5px 5px 8px;
+    /*sets size of whole square */
+    height: 200px;
+    width: 200px;
+    background-image: url("img/M4Cfaceflower.jpg");
+    /*sets size of image */
+    background-size: 200px;
+    /*gets rid of outline click */
+    outline: none;
+}
+
+/*gets rid of button shadow */
+.button:active {
+    box-shadow: 0px 0px 0px;
+}
+
+.one {
+    box-shadow: -5px -5px 8px;
+    height: 200px;
+    width: 200px;
+    background-image: url("img/M3Cskull.jpg");
+    background-size: 200px;
+    /*display,flex,justify help center text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.two {
+    box-shadow: 0px 0px 8px 5px;
+    height: 200px;
+    width: 200px;
+    background-image: url("img/dev-jane-01.jpg");
+    background-size: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.three {
+    box-shadow: 3px 3px 5px gray;
+    height: 200px;
+    width: 200px;
+    background-image: url("img/portfolio-02.jpg");
+    background-size: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*adds text highlight */
+.highlight {
+    margin-top: -300px;
+    background-color: aqua;
+}

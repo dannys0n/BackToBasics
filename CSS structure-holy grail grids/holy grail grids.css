@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+body {
+    display: grid;
+    /*defauts to no margins around this element*/
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    /*100vh takes entire page height*/
+    height: 100vh;
+    /*three rows. 4 columns*/
+    grid-template-rows: 15% auto 10%;
+    grid-template-columns: 10% auto auto 10%;
+    gap: 10px;
+}
+
+.header {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding: 10px;
+}
+
+.nav {
+    background-color: rgb(204, 204, 204);
+    padding: 10px;
+}
+
+.body {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /*rest sets up grid inside body*/
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.links {
+    background-color: rgb(204, 204, 204);
+    padding: 10px;
+}
+
+.footer {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding: 10px;
+}
+
+
+
+/*rest deals with grids inside body*/
+
+.content-one {
+    background-color:  rgb(215, 252, 253);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    padding: 10px;
+}
+
+.content-two {
+    background-color:  rgb(215, 252, 253);
+    grid-row-start: 1;
+    padding: 10px;
+}
+
+.content-three {
+    background-color:  rgb(215, 252, 253);
+    padding: 10px;
+}
+
+.content-four {
+    background-color:  rgb(215, 252, 253);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding: 10px;
+}

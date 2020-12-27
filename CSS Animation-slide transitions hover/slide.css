@@ -1,0 +1,147 @@
+/*parent is border of where causes animation*/
+.parent {
+    background-color: aquamarine;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+button {
+    /*postition relative makes box position start from parent (can't stack above or below parent)*/
+    position: relative;
+    border-radius: 10px;
+    background-color: gray;
+    width: 5em;
+    height: 5em;
+    left: 0%;
+    top: 15%;
+    /*transitions set what to change and how long*/
+    transition-property: left;
+    transition-duration: 500ms;
+}
+
+/*hovering parent causes button's reaction*/
+.parent:hover button {
+    left: 100%;
+}    
+
+
+
+
+
+
+
+
+
+/*make gun and hover trigger fires bullet*/
+.gun {
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    background-color: bisque;
+    background-color: white;
+    padding: 17%;
+}
+
+.barrel {
+    position: absolute;
+    background: silver;
+    width: 400px;
+    height: 80px;
+    left: 50px;
+    top: 50px;
+    border-top-left-radius: 20px;
+    z-index: 4;
+}
+
+.handle {
+    position: absolute;
+    background: brown;
+    color: black;
+    width: 80px;
+    height: 200px;
+    left: 90px;
+    top: 100px;
+    z-index: 3;
+}
+
+.trigger-guard {
+    position: absolute;
+    background: white;
+    width: 80px;
+    height: 50px;
+    left: 170px;
+    top: 130px;
+    border-bottom-right-radius: 50px;
+    border-right: 10px solid silver;
+    border-bottom: 10px solid silver;
+    z-index: 4;
+}
+
+.trigger {
+    position: absolute;
+    background: white;
+    width: 30px;
+    height: 40px;
+    top: 0px;
+    left: 22px;
+    z-index: 0;
+    transition-property: left;
+    transition-duration: 100ms;
+}
+
+.trigger-silver {
+    position: relative;
+    background: silver;
+    width: 35px;
+    height: 50px;
+    border-bottom-left-radius: 40px;
+}
+
+.trigger-none {
+    position: relative;
+    background: white;
+    width: 30px;
+    height: 45px;
+    left: 10px;
+    border-bottom-left-radius: 40px;
+}
+
+.trigger-guard:hover .trigger {
+    left: 0px;
+}    
+
+.bullet {
+    position: relative;
+    background: burlywood;
+    background-blend-mode: multiply;
+    width: 60px;
+    height: 25px;
+    left: -70px;
+    top: -60px;
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 60px;
+    transition-property: left;
+    transition-duration: 100ms;
+    z-index: 3;
+}
+
+.trigger-guard:hover .bullet {
+    left: 500px;
+}    
+
+.explosion {
+    position: relative;
+    left: 300px;
+    top: -140px;
+    transform: rotate(90deg);
+    z-index: 0;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 150ms;
+}
+
+.trigger-guard:hover .explosion {
+    opacity: 100%;
+}    

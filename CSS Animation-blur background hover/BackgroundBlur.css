@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    /*display&place-items, center all content*/
+    display: grid;
+    place-items: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;    
+}
+
+.title {
+    font-size: xx-large;
+    margin: 70px;
+    background-color: azure;
+    box-shadow: 5px 5px 8px;
+}
+
+.centerimage {
+    background-image: url("img/M6Crainbowskull.jpg");
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 8px;
+}
+
+/*container for all background images*/
+.imageBackground {
+    position: absolute;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /*container takes whole page*/
+    height: 100vh;
+    width: 100vw;
+}
+
+/*blurring starts here!!!!!!!!!!*/
+/*background images*/
+.background {
+    background-image: url("img/portfolio-02.jpg");
+    /*zooms and stops repeats to fit div*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*the blur being set*/
+    filter: blur(0px);
+    transition-property: filter;
+    transition-duration: .75s;
+}
+
+/*how it blurs*/
+.centerimage:hover ~ .imageBackground .background {
+    filter: blur(6px);
+}
+
+.centerimage:hover {
+    cursor: pointer;
+}

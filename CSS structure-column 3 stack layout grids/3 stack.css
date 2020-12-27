@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+body {
+    display: grid;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    /*100vh takes entire page height*/
+    height: 100vh;
+    /*three rows. auto rows only take 
+    needed space, 1fr takes the rest*/
+    grid-template-rows: auto 1fr 1fr;
+}
+
+header {
+    background: white;
+    /*gives the space around words*/
+    padding: 1px;
+}
+
+main {
+    background: rgb(97, 169, 228);
+}
+
+footer {
+    background: white;
+    text-align: center;
+}
+
+
+/*personalizing the grid*/
+
+main {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.cards {
+    position: relative;
+    display: grid;
+    top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    overflow-wrap: break-word;
+}
+
+.cards .card-one {
+    width: 300px;
+    display: block;
+  margin-left: auto;
+}
+
+.card-two {
+    width: 300px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-three {
+    width: 300px;
+    display: block;
+
+  margin-right: auto;
+}
+
+.button {
+    background-color: rgb(97, 169, 228);
+    position: relative;
+    padding: 13px;
+    padding-left: 50px;
+    border-radius: 10px;
+    top: 20px;
+    left: -115px;
+}
